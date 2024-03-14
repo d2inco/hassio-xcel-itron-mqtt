@@ -1,7 +1,7 @@
 name: "Xcel iTron MQTT"
 description: "Bridge from Xcel iTron smart meters to MQTT"
 url: "https://www.github.com/wingrunr21/hassio-xcel-itron-mqtt"
-version: "1.1.0"
+version: "1.1.1"
 slug: "xcel-itron-mqtt"
 arch:
   - aarch64
@@ -21,6 +21,10 @@ options:
   cert_dir: /config/certs
   cert_file: cert.pem
   key_file: key.pem
+  mqtt_host:
+  mqtt_port:
+  mqtt_user:
+  mqtt_password:
 schema:
   meter_ip: str
   meter_port: port
@@ -28,3 +32,7 @@ schema:
   cert_dir: str?
   cert_file: str?
   key_file: str?
+  mqtt_host: str?
+  mqtt_port: port?
+  mqtt_user: str?
+  mqtt_password: str?
